@@ -1,0 +1,44 @@
+{
+  "name": "@igorkowalczyk/wakatime-hours",
+  "version": "1.0.0",
+  "description": "Generate a badge that shows actual hours spent programming using wakatime",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js",
+    "format": "prettier --write . --ignore-unknown",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorKowalczyk/wakatime-hours.git"
+  },
+  "keywords": [
+    "wakatime",
+    "expressjs",
+    "badges"
+  ],
+  "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IgorKowalczyk/wakatime-hours/issues"
+  },
+  "homepage": "https://github.com/IgorKowalczyk/wakatime-hours#readme",
+  "dependencies": {
+    "badge-maker": "^3.3.1",
+    "body-parser": "^1.20.1",
+    "chalk": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.25.1"
+}
