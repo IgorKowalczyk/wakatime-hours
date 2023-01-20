@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development node index.js",
     "start": "NODE_ENV=production node index.js",
     "format": "prettier --write . --ignore-unknown",
