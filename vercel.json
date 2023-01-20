@@ -15,5 +15,8 @@
    "src": "/og-image.png",
    "dest": "/og-image.png"
   }
- ]
+ ],
+ "github": {
+  "silent": true
+ }
 }
