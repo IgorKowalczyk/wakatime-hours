@@ -28,7 +28,7 @@
 
 ## 🖥️ Hosting with Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Fwakatime-hourso&env=WAKATIME_API_KEY&envDescription=Environment%20Variables%20Docs&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Fwakatime-hours%23-self-hosting&project-name=portfolio&repo-name=igorkowalczyk-portfolio&demo-title=Example%20deploy&demo-description=Example%20production%20deploy%20from%20Github%20Repository&demo-url=https%3A%2F%2Fwakatime-hours.vercel.app&demo-image=https%3A%2F%2Fi.imgur.com%2FtntTLM1.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Fwakatime-hours&env=WAKATIME_API_KEY&envDescription=Environment%20Variables%20Docs&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Fwakatime-hours%23-self-hosting&project-name=portfolio&repo-name=igorkowalczyk-portfolio&demo-title=Example%20deploy&demo-description=Example%20production%20deploy%20from%20Github%20Repository&demo-url=https%3A%2F%2Fwakatime-hours.vercel.app&demo-image=https%3A%2F%2Fi.imgur.com%2FtntTLM1.png)
 
 ## 🔩 Self Hosting
 
