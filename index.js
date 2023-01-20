@@ -39,6 +39,7 @@ app.use((_, res, next) => {
 app.get("/api/badge/", async (req, res) => {
  const { label, labelColor, color, style } = req.query;
  res.setHeader("Cache-Control", "public, max-age=3600, must-revalidate");
+ res.setHeader("Content-Type", "image/svg+xml");
  await fetch(`https://wakatime.com/api/v1/users/current/all_time_since_today`, {
   method: "GET",
   headers: {
