@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 dotenv.config();
 if (!process.env.WAKATIME_API_KEY) throw new Error("Wakatime API key is not defined.");
 const token = new Buffer.from(process.env.WAKATIME_API_KEY).toString("base64");
-app.use(morgan(event(":method :url :status :res[content-length] - :response-time ms")));
+if (process.env.NODE_ENV !== 'production') app.use(morgan(event(":method :url :status :res[content-length] - :response-time ms")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(compression());
