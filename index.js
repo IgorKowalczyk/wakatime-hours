@@ -3,10 +3,10 @@ import morgan from "morgan";
 import * as dotenv from "dotenv";
 import bodyParser from "body-parser";
 import rateLimit from "express-rate-limit";
-import { ready, event } from "./utils/logger.js";
 import fetch from "node-fetch";
 import compression from "compression";
 import { makeBadge } from "badge-maker";
+import { event, ready } from "./utils/logger.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -66,7 +66,7 @@ app.get("/api/badge/", async (req, res) => {
     );
    }
   })
-  .catch((err) => {
+  .catch(() => {
    res.status(500).send(
     makeBadge({
      label: "Wakatime",
@@ -90,15 +90,15 @@ app.listen(port, () => {
  console.log(ready("Server is running on port: " + port));
 });
 
-process.on("unhandledRejection", (reason, p) => {
+process.on("unhandledRejection", () => {
  return;
 });
-process.on("uncaughtException", (err, origin) => {
+process.on("uncaughtException", () => {
  return;
 });
-process.on("uncaughtExceptionMonitor", (err, origin) => {
+process.on("uncaughtExceptionMonitor", () => {
  return;
 });
-process.on("multipleResolves", (type, promise, reason) => {
+process.on("multipleResolves", () => {
  return;
 });

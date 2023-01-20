@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development node index.js",
     "start": "NODE_ENV=production node index.js",
     "format": "prettier --write . --ignore-unknown",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint": "eslint . --ext .js,.ts"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.3"
   },
   "engines": {
