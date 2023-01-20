@@ -17,6 +17,7 @@ app.use(morgan(event(":method :url :status :res[content-length] - :response-time
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(compression());
+app.use(express.static('public'))
 app.use(
  rateLimit({
   windowMs: 1 * 60 * 1000,
@@ -78,8 +79,6 @@ app.get("*", (req, res) => {
   message: "Page not found.",
  });
 });
-
-app.use("/static", express.static("public"));
 
 app.listen(port, () => {
  console.log(ready("Server is running on port: " + port));
