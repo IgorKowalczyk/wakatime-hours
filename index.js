@@ -11,7 +11,7 @@ import { makeBadge } from "badge-maker";
 const app = express();
 const port = process.env.PORT || 3000;
 dotenv.config();
-if(!process.env.WAKATIME_API_KEY) throw new Error("Wakatime API key is not defined.");
+if (!process.env.WAKATIME_API_KEY) throw new Error("Wakatime API key is not defined.");
 const token = new Buffer.from(process.env.WAKATIME_API_KEY).toString("base64");
 app.use(morgan(event(":method :url :status :res[content-length] - :response-time ms")));
 app.use(bodyParser.json());
@@ -58,7 +58,8 @@ app.get("/api/badge/", async (req, res) => {
      })
     );
    }
-  }).catch((err) => {
+  })
+  .catch((err) => {
    res.status(500).send(
     makeBadge({
      label: "Wakatime",
