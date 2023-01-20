@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import rateLimit from "express-rate-limit";
 import { ready, event } from "./utils/logger.js";
 import fetch from "node-fetch";
+import compression from "compression";
 import { makeBadge } from "badge-maker";
 
 const app = express();
@@ -14,6 +15,7 @@ const token = new Buffer.from(process.env.WAKATIME_API_KEY).toString("base64");
 app.use(morgan(event(":method :url :status :res[content-length] - :response-time ms")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(compression());
 app.use(
  rateLimit({
   windowMs: 1 * 60 * 1000,
@@ -48,13 +50,23 @@ app.get("/api/badge/", async (req, res) => {
     res.send(
      makeBadge({
       label: label || "Wakatime",
-      message: data.data.text,
+      message: data.data.text || "Getting data...",
       color: color || "blue",
       labelColor: labelColor || "grey",
       style: style || "flat",
      })
     );
    }
+  }).catch((err) => {
+   res.status(500).send(
+    makeBadge({
+     label: "Wakatime",
+     message: "Internal server error.",
+     color: "red",
+     labelColor: "grey",
+     style: "flat",
+    })
+   );
   });
 });
 

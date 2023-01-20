@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node index.js",
+    "dev": "NODE_ENV=development node index.js",
+    "start": "NODE_ENV=production node index.js",
     "format": "prettier --write . --ignore-unknown",
     "format:check": "prettier --check ."
   },
@@ -28,6 +29,7 @@
     "badge-maker": "^3.3.1",
     "body-parser": "^1.20.1",
     "chalk": "^5.2.0",
+    "compression": "^1.7.4",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-rate-limit": "^6.7.0",
