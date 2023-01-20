@@ -17,7 +17,7 @@ app.use(morgan(event(":method :url :status :res[content-length] - :response-time
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(compression());
-app.use(express.static('public'))
+app.use(express.static("public"));
 app.use(
  rateLimit({
   windowMs: 1 * 60 * 1000,
@@ -82,4 +82,17 @@ app.get("*", (req, res) => {
 
 app.listen(port, () => {
  console.log(ready("Server is running on port: " + port));
+});
+
+process.on("unhandledRejection", (reason, p) => {
+ return;
+});
+process.on("uncaughtException", (err, origin) => {
+ return;
+});
+process.on("uncaughtExceptionMonitor", (err, origin) => {
+ return;
+});
+process.on("multipleResolves", (type, promise, reason) => {
+ return;
 });
