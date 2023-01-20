@@ -33,6 +33,11 @@ app.disable("x-powered-by");
 app.use((_, res, next) => {
  res.header("Access-Control-Allow-Origin", "*");
  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+ res.setHeader("X-Content-Type-Options", "nosniff");
+ res.setHeader("Content-Security-Policy", "default-src 'self'");
+ res.setHeader("Strict-Transport-Security", "max-age=3600; includeSubDomains");
+ res.setHeader("X-Frame-Options", "SAMEORIGIN");
+ res.setHeader("X-XSS-Protection", "1; mode=block");
  next();
 });
 
