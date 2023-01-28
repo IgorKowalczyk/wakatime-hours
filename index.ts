@@ -10,7 +10,7 @@ import type { Options } from "express-rate-limit";
 import type { Format } from "badge-maker";
 import type { Request, Response, NextFunction } from "express";
 
-const app: express.Application = express();
+const app = express() as express.Application;
 const port: number = parseInt(process.env.PORT || "3000");
 if (!process.env.WAKATIME_API_KEY) throw new Error("WAKATIME_API_KEY is not defined in .env file.");
 const token = Buffer.from(process.env.WAKATIME_API_KEY).toString("base64");
