@@ -32,8 +32,9 @@ app.use(
 
 app.disable("x-powered-by");
 
+/*
 app.use((_: Request, res: Response, next: NextFunction) => {
- res.header("Access-Control-Allow-Origin", "*");
+ res.header("Access-Control-Allow-Methods", "GET");
  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  res.setHeader("X-Content-Type-Options", "nosniff");
  res.setHeader("Content-Security-Policy", "default-src 'self'");
@@ -42,6 +43,7 @@ app.use((_: Request, res: Response, next: NextFunction) => {
  res.setHeader("X-XSS-Protection", "1; mode=block");
  next();
 });
+*/
 
 app.get("/api/badge/", async (req: Request, res: Response) => {
  const { label, labelColor, color, style } = req.query as {
