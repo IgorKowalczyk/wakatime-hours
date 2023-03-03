@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "NODE_ENV=development npx ts-node index.ts",
     "start": "NODE_ENV=production npx ts-node index.ts",
-    "format": "prettier --write . --ignore-unknown",
-    "format:check": "prettier --check .",
+    "format": "prettier --write . --ignore-unknown --cache",
+    "format:check": "prettier --check --cache .",
     "lint": "eslint . --ext .js,.ts"
   },
   "repository": {

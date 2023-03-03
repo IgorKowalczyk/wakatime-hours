@@ -8,7 +8,7 @@ import { makeBadge } from "badge-maker";
 import { Logger } from "./utils/logger.js";
 import type { Options } from "express-rate-limit";
 import type { Format } from "badge-maker";
-import type { Request, Response, NextFunction } from "express";
+import type { Request, Response } from "express";
 
 const app = express() as express.Application;
 const port: number = parseInt(process.env.PORT || "3000");
@@ -31,19 +31,6 @@ app.use(
 );
 
 app.disable("x-powered-by");
-
-/*
-app.use((_: Request, res: Response, next: NextFunction) => {
- res.header("Access-Control-Allow-Methods", "GET");
- res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
- res.setHeader("X-Content-Type-Options", "nosniff");
- res.setHeader("Content-Security-Policy", "default-src 'self'");
- res.setHeader("Strict-Transport-Security", "max-age=3600; includeSubDomains");
- res.setHeader("X-Frame-Options", "SAMEORIGIN");
- res.setHeader("X-XSS-Protection", "1; mode=block");
- next();
-});
-*/
 
 app.get("/api/badge/", async (req: Request, res: Response) => {
  const { label, labelColor, color, style } = req.query as {
