@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/wakatime-hours",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generate a badge that shows actual hours spent programming using wakatime",
   "main": "index.js",
   "type": "module",
@@ -9,7 +9,8 @@
     "start": "NODE_ENV=production npx ts-node index.ts",
     "format": "prettier --write . --ignore-unknown --cache",
     "format:check": "prettier --check --cache .",
-    "lint": "eslint . --ext .js,.ts"
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -28,25 +29,28 @@
   },
   "homepage": "https://github.com/IgorKowalczyk/wakatime-hours#readme",
   "dependencies": {
-    "badge-maker": "^3.3.1",
-    "chalk": "^5.2.0",
-    "compression": "^1.7.4",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-rate-limit": "^6.7.0",
-    "node-fetch": "^3.3.0"
+    "@types/compression": "^1.7.2",
+    "@types/morgan": "^1.9.4",
+    "badge-maker": "3.3.1",
+    "chalk": "5.2.0",
+    "compression": "1.7.4",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "express-rate-limit": "6.7.0",
+    "node-fetch": "3.3.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.16",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "morgan": "^1.10.0",
-    "prettier": "^2.8.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
+    "@igorkowalczyk/eslint-config": "1.0.3",
+    "@igorkowalczyk/prettier-config": "1.0.3",
+    "@types/express": "4.17.17",
+    "@types/node": "18.15.1",
+    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "eslint": "8.36.0",
+    "morgan": "1.10.0",
+    "prettier": "2.8.4",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.5"
   },
   "engines": {
     "node": ">=14.0.0"

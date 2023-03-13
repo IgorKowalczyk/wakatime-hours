@@ -1,20 +1,20 @@
+import { makeBadge } from "badge-maker";
+import type { Format } from "badge-maker";
+import compression from "compression";
 import express from "express";
+import type { Request, Response } from "express";
+import rateLimit from "express-rate-limit";
+import type { Options } from "express-rate-limit";
 import morgan from "morgan";
 import "dotenv/config";
-import rateLimit from "express-rate-limit";
 import fetch from "node-fetch";
-import compression from "compression";
-import { makeBadge } from "badge-maker";
 import { Logger } from "./utils/logger.js";
-import type { Options } from "express-rate-limit";
-import type { Format } from "badge-maker";
-import type { Request, Response } from "express";
 
 const app = express() as express.Application;
 const port: number = parseInt(process.env.PORT || "3000");
 if (!process.env.WAKATIME_API_KEY) throw new Error("WAKATIME_API_KEY is not defined in .env file.");
 const token = Buffer.from(process.env.WAKATIME_API_KEY).toString("base64");
-if (process.env.NODE_ENV !== "production") app.use(morgan(Logger("event", ":method :url :status :res[content-length] - :response-time ms")));
+if (process.env.NODE_ENV !== "production") app.use(morgan(Logger("event", ":method :url :status :res[content-length] - :response-time ms") as string));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
@@ -43,7 +43,7 @@ app.get("/api/badge/", async (req: Request, res: Response) => {
  res.setHeader("Content-Type", "image/svg+xml");
  res.setHeader("Vary", "Accept-Encoding");
 
- await fetch(`https://wakatime.com/api/v1/users/current/all_time_since_today`, {
+ await fetch("https://wakatime.com/api/v1/users/current/all_time_since_today", {
   method: "GET",
   headers: {
    Authorization: `Basic ${token}`,
