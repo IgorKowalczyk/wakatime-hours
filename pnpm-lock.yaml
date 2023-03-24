@@ -18,7 +18,7 @@ specifiers:
   express-rate-limit: 6.7.0
   morgan: 1.10.0
   node-fetch: 3.3.1
-  prettier: 2.8.6
+  prettier: 2.8.7
   ts-node: 10.9.1
   typescript: 5.0.2
 
@@ -34,7 +34,7 @@ dependencies:
   node-fetch: 3.3.1
 
 devDependencies:
-  '@igorkowalczyk/eslint-config': 1.0.3_i3m5vljkgplksadotk5rismxy4
+  '@igorkowalczyk/eslint-config': 1.0.3_jtvtaj53c7mppv4frdk7nvsegy
   '@igorkowalczyk/prettier-config': 1.0.3
   '@types/express': 4.17.17
   '@types/node': 18.15.6
@@ -42,7 +42,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
   eslint: 8.36.0
   morgan: 1.10.0
-  prettier: 2.8.6
+  prettier: 2.8.7
   ts-node: 10.9.1_scf5ll4phrufleolbwuhaaa4ae
   typescript: 5.0.2
 
@@ -112,13 +112,13 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@igorkowalczyk/eslint-config/1.0.3_i3m5vljkgplksadotk5rismxy4:
+  /@igorkowalczyk/eslint-config/1.0.3_jtvtaj53c7mppv4frdk7nvsegy:
     resolution: {integrity: sha512-JZbfl4OlSquoATSd09IYwL0mkOpXiZcrjN6BzEEUIcvqZtk/A4G5OyyU+ZQj213SDNb0M/XAgn0LS+kYZKYLsw==}
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
       eslint-plugin-import: 2.27.5_cnkxirszkzb4o6ts7gbclno24e
-      eslint-plugin-prettier: 4.2.1_w3shflqoegspmha2z74hzwkfbm
+      eslint-plugin-prettier: 4.2.1_eoewazrt3moyisi2qkg3xtm6hi
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-typescript
@@ -130,7 +130,7 @@ packages:
   /@igorkowalczyk/prettier-config/1.0.3:
     resolution: {integrity: sha512-STNkpxGegsCkoi3v/g88OvzDTATONNhF/U/ZzyLLDnDaLTTFg3dil7Ab8rRe5RoLSQhBnLzcXVea6VBGGqArxg==}
     dependencies:
-      prettier: 2.8.6
+      prettier: 2.8.7
     dev: true
 
   /@jridgewell/resolve-uri/3.1.0:
@@ -934,7 +934,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_w3shflqoegspmha2z74hzwkfbm:
+  /eslint-plugin-prettier/4.2.1_eoewazrt3moyisi2qkg3xtm6hi:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -947,7 +947,7 @@ packages:
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
-      prettier: 2.8.6
+      prettier: 2.8.7
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -1837,8 +1837,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.8.6:
-    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
