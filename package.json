@@ -43,7 +43,7 @@
     "@igorkowalczyk/eslint-config": "1.0.3",
     "@igorkowalczyk/prettier-config": "1.0.3",
     "@types/express": "4.17.17",
-    "@types/node": "18.15.10",
+    "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "5.57.0",
     "eslint": "8.36.0",
