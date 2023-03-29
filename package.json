@@ -40,7 +40,7 @@
     "node-fetch": "3.3.1"
   },
   "devDependencies": {
-    "@igorkowalczyk/eslint-config": "1.0.3",
+    "@igorkowalczyk/eslint-config": "1.1.0",
     "@igorkowalczyk/prettier-config": "1.1.0",
     "@types/express": "4.17.17",
     "@types/node": "18.15.11",
