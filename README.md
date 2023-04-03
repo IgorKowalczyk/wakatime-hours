@@ -5,7 +5,7 @@
     <img src="https://wakatime-hours.vercel.app/api/badge">
   </a>
     <a aria-label="Github License" href="https://github.com/igorkowalczyk/wakatime-hours/blob/main/license.md">
-    <img src="https://img.shields.io/github/license/igorkowalczyk/blog?color=blue&logo=github&label=License">
+    <img src="https://img.shields.io/github/license/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=License">
   </a>
       <a aria-label="Version" href="https://github.com/igorkowalczyk/wakatime-hours/releases">
     <img src="https://img.shields.io/github/v/release/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Version">
