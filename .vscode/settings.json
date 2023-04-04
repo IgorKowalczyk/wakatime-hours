@@ -1,0 +1,8 @@
+{
+ "eslint.enable": false,
+ "deno.enable": true,
+ "markdown.validate.ignoredLinks": [
+  "#%EF%B8%8F-available-styles",
+  "#-custom-colors"
+ ]
+}

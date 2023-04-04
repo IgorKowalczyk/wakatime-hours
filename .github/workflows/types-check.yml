@@ -1,4 +1,4 @@
-name: Format check
+name: Types Check
 
 on: [push, pull_request]
 
@@ -13,5 +13,5 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - name: 🚀 Check formatting
-        run: deno fmt --check
+      - name: 🚀 Check types
+        run: deno check main.ts

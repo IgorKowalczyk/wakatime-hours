@@ -1,56 +1,85 @@
 ![og-image](https://user-images.githubusercontent.com/49127376/213679714-1f9fe70b-b815-40f1-9448-8035591ff5bc.png)
 
 <div align="center">
-  <a aria-label="Badge" href="https://wakatime-hours.vercel.app">
-    <img src="https://wakatime-hours.vercel.app/api/badge">
-  </a>
-    <a aria-label="Github License" href="https://github.com/igorkowalczyk/wakatime-hours/blob/main/license.md">
-    <img src="https://img.shields.io/github/license/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=License">
-  </a>
-      <a aria-label="Version" href="https://github.com/igorkowalczyk/wakatime-hours/releases">
-    <img src="https://img.shields.io/github/v/release/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Version">
-  </a>
-        <a aria-label="Vulnerabilities" href="https://github.com/igorkowalczyk/wakatime-hours">
-    <img src="https://img.shields.io/snyk/vulnerabilities/github/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Vulnerabilities">
-  </a>
-  <br/>
-  <br/>
-  <b>Generate a badge that shows actual hours spent programming using wakatime</b>
+ <a aria-label="Powered by" href="https://wakatime-hours.vercel.app">
+  <img src="https://img.shields.io/static/v1?label=Powered%20by&message=Deno&color=blue&logo=deno">
+ </a>
+ <a aria-label="Badge" href="https://wakatime-hours.vercel.app">
+  <img src="https://wakatime-hours.vercel.app/api/badge">
+ </a>
+ <a aria-label="Github License" href="https://github.com/igorkowalczyk/wakatime-hours/blob/main/license.md">
+  <img src="https://img.shields.io/github/license/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=License">
+ </a>
+ <a aria-label="Version" href="https://github.com/igorkowalczyk/wakatime-hours/releases">
+  <img src="https://img.shields.io/github/v/release/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Version">
+ </a>
+ <a aria-label="Vulnerabilities" href="https://github.com/igorkowalczyk/wakatime-hours">
+  <img src="https://img.shields.io/snyk/vulnerabilities/github/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Vulnerabilities">
+ </a>
+ <br/>
+ <br/>
+ <b>Generate a badge that shows actual hours spent programming using WakaTime</b>
 </div>
 
 ---
 
 > **Warning**:
-> In order to display your statistics you need to host this API yourself, for this I recommend [Vercel](https://vercel.com).
+> In order to display your statistics you need to host this API yourself, for this I recommend using [Deno Deploy](https://deno.com/deploy).
 
 > **Note**:
 > Don't forget to replace example `YOUR-DEPLOY` parameter with real value.
 
-## 🖥️ Hosting with Vercel
+## 🖥️ Hosting with Deno Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Figorkowalczyk%2Fwakatime-hours&env=WAKATIME_API_KEY&envDescription=Environment%20Variables%20Docs&envLink=https%3A%2F%2Fgithub.com%2FIgorKowalczyk%2Fwakatime-hours%23-self-hosting&project-name=portfolio&repo-name=igorkowalczyk-portfolio&demo-title=Example%20deploy&demo-description=Example%20production%20deploy%20from%20Github%20Repository&demo-url=https%3A%2F%2Fwakatime-hours.vercel.app&demo-image=https%3A%2F%2Fi.imgur.com%2FtntTLM1.png)
+1. Fork [this repository](https://github.com/IgorKowalczyk/wakatime-hours)
+2. Go to [Deno Deploy](https://deno.com/deploy) and connect your GitHub account
+3. Click `New Project` and select your forked repository
+4. Select `main` branch
+5. Add `WAKATIME_API_KEY` environment variable with your Wakatime API Key
+6. Click `Link`
+7. Visit `https://YOUR-DEPLOY/api/badge` in your browser
 
 ## 🔩 Self Hosting
 
 1. Clone [this repository](https://github.com/igorkowalczyk/wakatime-hours) `git clone https://github.com/IgorKowalczyk/wakatime-hours`
-2. Run `pnpm i` to install all dependencies,
-4. Create new file named `.env` Remember - the file is super secret, better to not share it.
-5. In `.env` file set this values:
+2. Create new file named `.env` Remember - the file is super secret, better to not share it.
+3. In `.env` file set this values:
    - `WAKATIME_API_KEY` - Your Wakatime API Key
-6. Run `pnpm run build` to build the project or `npm run dev` to run the project in development mode.
+   - `PORT` - Port on which the API will be available (optional, default: `8080`)
+4. Run `deno task dev` to start the project in development mode or `deno task start` to run the project in production mode.
+5. Visit `http://localhost:8080` in your browser _(or `http://localhost:${PORT}` if you set custom port)_
+
+## ▲ Hosting with Vercel
+
+> **Warning**: <br/>
+> **This API no longer supports Vercel hosting.** But if you want to host this API on Vercel, **you can use old version of this API (`>= 2.x.x`)** which is available [here](https://github.com/IgorKowalczyk/wakatime-hours/releases/tag/v2.1.0).
+
+> **The old version of this API is no longer supported and will not receive any updates!**
+
+## 🗜️ API Usage
+
+```http
+GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
+```
+
+| Parameter | Type     | Description                          | Available values                                | Default value |
+| :-------- | :------- | :----------------------------------- | :---------------------------------------------- | :------------ |
+| `style`   | `string` | **Optional**. The style of the badge | [Available styles](#%EF%B8%8F-available-styles) | `flat`        |
+| `color`   | `string` | **Optional**. The color of the badge | [Available colors](#-custom-colors)             | `blue`        |
+| `label`   | `string` | **Optional**. The label of the badge | Any string                                      | `Wakatime`    |
 
 ## 🖼️ Available styles
 
 > **Note**:
 > The default style is `flat`
 
-| Style | Example | Usage |
-| ----- | ---- | ---- |
-| `flat` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true) | `style=flat` |
-| `flat-square` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat-square&display=true) | `style=flat-square` |
-| `for-the-badge` | ![](https://wakatime-hours.vercel.app/api/badge?style=for-the-badge&display=true) | `style=for-the-badge` |
-| `plastic` | ![](https://wakatime-hours.vercel.app/api/badge?style=plastic&display=true) | `style=plastic` |
-| `social` | ![](https://wakatime-hours.vercel.app/api/badge?style=social&display=true) | `style=social` |
+| Style           | Example                                                              | Usage                 |
+| --------------- | -------------------------------------------------------------------- | --------------------- |
+| `flat`          | ![](https://wakatime-hours.vercel.app/api/badge?style=flat)          | `style=flat`          |
+| `flat-square`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat-square)   | `style=flat-square`   |
+| `for-the-badge` | ![](https://wakatime-hours.vercel.app/api/badge?style=for-the-badge) | `style=for-the-badge` |
+| `plastic`       | ![](https://wakatime-hours.vercel.app/api/badge?style=plastic)       | `style=plastic`       |
+| `social`        | ![](https://wakatime-hours.vercel.app/api/badge?style=social)        | `style=social`        |
 
 > **Note**:
 > To apply the style, add to the URL `?style=YOUR-STYLE`, if you use other parameters you can use `&style=YOUR-STYLE`
@@ -60,19 +89,19 @@
 > **Note**:
 > The default color is `blue`
 
-| Color | Example | Usage | Label Color | Label usage | 
-| ----- | ---- | ---- | ---- |  ---- | 
-| `brightgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=brightgreen) | `color=brightgreen`  | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=brightgreen) | `labelColor=brightgreen` |
-| `green` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=green) | `color=green` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=green) | `labelColor=green` |
-| `yellow` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=yellow) | `color=yellow` |  ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=yellow) | `labelColor=yellow` |
-| `yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=yellowgreen) | `labelColor=yellowgreen` |
-| `orange` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=orange) | `color=orange` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=orange) | `labelColor=orange` |
-| `red` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=red) | `color=red` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=red) | `labelColor=red` |
-| `blue` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=blue) | `color=blue` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=blue) | `labelColor=blue` |
-| `grey` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=grey) | `color=grey` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=grey) | `labelColor=grey` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=lightgrey) | `labelColor=lightgrey` |
-| `lightgrey` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=lightgrey) | `color=lightgrey` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=lightgrey) | `labelColor=lightgrey` |
-| `blueviolet` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=blueviolet) | `color=blueviolet` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=blueviolet) | `labelColor=blueviolet` |
-| `ff69b4` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&color=ff69b4) | `color=ff69b4` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&display=true&labelColor=ff69b4) | `labelColor=ff69b4` |
+| Color         | Example                                                                       | Usage               | Label Color                                                                        | Label usage              |
+| ------------- | ----------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------- | ------------------------ |
+| `brightgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
+| `green`       | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
+| `yellow`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
+| `yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=yellowgreen) | `labelColor=yellowgreen` |
+| `orange`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=orange)      | `color=orange`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=orange)      | `labelColor=orange`      |
+| `red`         | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=red)         | `color=red`         | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=red)         | `labelColor=red`         |
+| `blue`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=blue)        | `color=blue`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=blue)        | `labelColor=blue`        |
+| `grey`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=grey)        | `color=grey`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=grey)        | `labelColor=grey`        |
+| `lightgrey`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=lightgrey)   | `color=lightgrey`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=lightgrey)   | `labelColor=lightgrey`   |
+| `blueviolet`  | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
+| `ff69b4`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
 
 > **Note**:
 > To apply the style, add to the URL `?color=YOUR-COLOR`, if you use other parameters you can use `&color=YOUR-COLOR`
@@ -84,7 +113,7 @@
 
 You can overwrite default `Wakatime` text with your own label.
 
-![](https://wakatime-hours.vercel.app/api/badge?label=Your+own+label&display=true&color=blue)
+![](https://wakatime-hours.vercel.app/api/badge?label=Your+own+label&color=blue)
 
 > **Note**:
 > Replace whitespace with `+` character in multi-word labels.
