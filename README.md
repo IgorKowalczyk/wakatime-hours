@@ -73,8 +73,8 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 > **Note**:
 > The default style is `flat`
 
-| Style           | Example                                                              | Usage                 |
-| --------------- | -------------------------------------------------------------------- | --------------------- |
+| Style           | Example                                                            | Usage                 |
+| --------------- | ------------------------------------------------------------------ | --------------------- |
 | `flat`          | ![](https://wakatime-hours.deno.dev/api/badge?style=flat)          | `style=flat`          |
 | `flat-square`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat-square)   | `style=flat-square`   |
 | `for-the-badge` | ![](https://wakatime-hours.deno.dev/api/badge?style=for-the-badge) | `style=for-the-badge` |
@@ -89,8 +89,8 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 > **Note**:
 > The default color is `blue`
 
-| Color         | Example                                                                       | Usage               | Label Color                                                                        | Label usage              |
-| ------------- | ----------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------- | ------------------------ |
+| Color         | Example                                                                     | Usage               | Label Color                                                                      | Label usage              |
+| ------------- | --------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------- | ------------------------ |
 | `brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
 | `green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
 | `yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
