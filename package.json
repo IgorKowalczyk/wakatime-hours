@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/wakatime-hours",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Generate a badge that shows actual hours spent programming using wakatime",
   "main": "index.js",
   "type": "module",
