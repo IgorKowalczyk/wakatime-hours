@@ -12,7 +12,7 @@ type BadgeProps = {
 };
 
 const env = await load();
-const port = parseInt(env["PORT"]) || 8080;
+const port = parseInt(Deno.env.get("PORT") as string) || parseInt(env["PORT"]) || 8080;
 const server = Deno.listen({ port: port });
 
 const cache = new LRU({
@@ -22,8 +22,9 @@ const cache = new LRU({
 
 console.log(`HTTP webserver running.  Access it at:  http://localhost:${port}/`);
 
-if (!env["WAKATIME_API_KEY"]) throw new Error("WAKATIME_API_KEY is not defined in .env file.");
-const token = Buffer.from(env["WAKATIME_API_KEY"]).toString("base64");
+const api = Deno.env.get("WAKATIME_API_KEY") || env["WAKATIME_API_KEY"];
+if (!api) throw new Error("WAKATIME_API_KEY is not defined in .env file.");
+const token = Buffer.from(api).toString("base64");
 
 for await (const conn of server) {
  serveHttp(conn).catch(console.error) as Promise<void>;
