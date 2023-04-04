@@ -1,6 +1,6 @@
 import { makeBadge } from "https://esm.sh/badge-maker@3.3.1";
 import type { Format } from "https://esm.sh/badge-maker@3.3.1";
-import { Buffer } from "node:buffer";
+import { Buffer } from "https://esm.sh/buffer@6.0.3";
 import { load } from "https://deno.land/std@0.182.0/dotenv/mod.ts";
 import LRU from "https://esm.sh/lru-cache@8.0.4";
 
