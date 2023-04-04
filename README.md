@@ -1,11 +1,11 @@
 ![og-image](https://user-images.githubusercontent.com/49127376/213679714-1f9fe70b-b815-40f1-9448-8035591ff5bc.png)
 
 <div align="center">
- <a aria-label="Powered by" href="https://wakatime-hours.vercel.app">
+ <a aria-label="Powered by" href="https://wakatime-hours.deno.dev">
   <img src="https://img.shields.io/static/v1?label=Powered%20by&message=Deno&color=blue&logo=deno">
  </a>
- <a aria-label="Badge" href="https://wakatime-hours.vercel.app">
-  <img src="https://wakatime-hours.vercel.app/api/badge">
+ <a aria-label="Badge" href="https://wakatime-hours.deno.dev">
+  <img src="https://wakatime-hours.deno.dev/api/badge">
  </a>
  <a aria-label="Github License" href="https://github.com/igorkowalczyk/wakatime-hours/blob/main/license.md">
   <img src="https://img.shields.io/github/license/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=License">
@@ -75,11 +75,11 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 
 | Style           | Example                                                              | Usage                 |
 | --------------- | -------------------------------------------------------------------- | --------------------- |
-| `flat`          | ![](https://wakatime-hours.vercel.app/api/badge?style=flat)          | `style=flat`          |
-| `flat-square`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat-square)   | `style=flat-square`   |
-| `for-the-badge` | ![](https://wakatime-hours.vercel.app/api/badge?style=for-the-badge) | `style=for-the-badge` |
-| `plastic`       | ![](https://wakatime-hours.vercel.app/api/badge?style=plastic)       | `style=plastic`       |
-| `social`        | ![](https://wakatime-hours.vercel.app/api/badge?style=social)        | `style=social`        |
+| `flat`          | ![](https://wakatime-hours.deno.dev/api/badge?style=flat)          | `style=flat`          |
+| `flat-square`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat-square)   | `style=flat-square`   |
+| `for-the-badge` | ![](https://wakatime-hours.deno.dev/api/badge?style=for-the-badge) | `style=for-the-badge` |
+| `plastic`       | ![](https://wakatime-hours.deno.dev/api/badge?style=plastic)       | `style=plastic`       |
+| `social`        | ![](https://wakatime-hours.deno.dev/api/badge?style=social)        | `style=social`        |
 
 > **Note**:
 > To apply the style, add to the URL `?style=YOUR-STYLE`, if you use other parameters you can use `&style=YOUR-STYLE`
@@ -91,17 +91,17 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 
 | Color         | Example                                                                       | Usage               | Label Color                                                                        | Label usage              |
 | ------------- | ----------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------- | ------------------------ |
-| `brightgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
-| `green`       | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
-| `yellow`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
-| `yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=yellowgreen) | `labelColor=yellowgreen` |
-| `orange`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=orange)      | `color=orange`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=orange)      | `labelColor=orange`      |
-| `red`         | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=red)         | `color=red`         | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=red)         | `labelColor=red`         |
-| `blue`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=blue)        | `color=blue`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=blue)        | `labelColor=blue`        |
-| `grey`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=grey)        | `color=grey`        | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=grey)        | `labelColor=grey`        |
-| `lightgrey`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=lightgrey)   | `color=lightgrey`   | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=lightgrey)   | `labelColor=lightgrey`   |
-| `blueviolet`  | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
-| `ff69b4`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime-hours.vercel.app/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
+| `brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
+| `green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
+| `yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
+| `yellowgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=yellowgreen) | `labelColor=yellowgreen` |
+| `orange`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=orange)      | `color=orange`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=orange)      | `labelColor=orange`      |
+| `red`         | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=red)         | `color=red`         | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=red)         | `labelColor=red`         |
+| `blue`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=blue)        | `color=blue`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=blue)        | `labelColor=blue`        |
+| `grey`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=grey)        | `color=grey`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=grey)        | `labelColor=grey`        |
+| `lightgrey`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=lightgrey)   | `color=lightgrey`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=lightgrey)   | `labelColor=lightgrey`   |
+| `blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
+| `ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
 
 > **Note**:
 > To apply the style, add to the URL `?color=YOUR-COLOR`, if you use other parameters you can use `&color=YOUR-COLOR`
@@ -113,7 +113,7 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 
 You can overwrite default `Wakatime` text with your own label.
 
-![](https://wakatime-hours.vercel.app/api/badge?label=Your+own+label&color=blue)
+![](https://wakatime-hours.deno.dev/api/badge?label=Your+own+label&color=blue)
 
 > **Note**:
 > Replace whitespace with `+` character in multi-word labels.
