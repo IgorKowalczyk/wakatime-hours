@@ -13,5 +13,5 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - name: 🚀 Check formatting
-        run: deno task format:check
+      - name: 🚀 Check lint
+        run: deno task lint
