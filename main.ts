@@ -49,7 +49,7 @@ async function serveHttp(conn: Deno.Conn) {
      headers: {
       Location: "/api/badge",
      },
-    })
+    }),
    );
    continue;
   }
@@ -76,7 +76,7 @@ async function serveHttp(conn: Deno.Conn) {
       "x-server-cache": "HIT",
       "Server-Timing": `response;dur=${Date.now() - start}ms`,
      },
-    })
+    }),
    );
    continue;
   }
@@ -115,7 +115,7 @@ async function serveHttp(conn: Deno.Conn) {
      "x-server-cache": "MISS",
      "Server-Timing": `response;dur=${Date.now() - start}ms`,
     },
-   })
+   }),
   );
  }
 }

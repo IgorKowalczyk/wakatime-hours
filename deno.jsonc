@@ -3,23 +3,25 @@
  "tasks": {
   "dev": "deno run --watch --allow-net --allow-env --allow-read main.ts",
   "start": "deno run --allow-net --allow-env --allow-read main.ts",
-  "fmt": "deno fmt",
-  "fmt:check": "deno fmt --check",
+  "format": "deno fmt",
+  "format:check": "deno fmt --check",
   "lint": "deno lint"
  },
  "compilerOptions": {
   "checkJs": false
  },
  "fmt": {
-  "files": {
-   "include": ["."]
-  },
-  "options": {
-   "useTabs": false,
-   "lineWidth": 2000,
-   "indentWidth": 1,
-   "singleQuote": false,
-   "proseWrap": "preserve"
+  "include": ["."],
+  "useTabs": false,
+  "lineWidth": 2000,
+  "indentWidth": 1,
+  "singleQuote": false,
+  "proseWrap": "preserve"
+ },
+ "lint": {
+  "include": ["."],
+  "rules": {
+   "tags": ["recommended"]
   }
  }
 }

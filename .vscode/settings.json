@@ -1,8 +1,7 @@
 {
  "eslint.enable": false,
  "deno.enable": true,
- "markdown.validate.ignoredLinks": [
-  "#%EF%B8%8F-available-styles",
-  "#-custom-colors"
- ]
+ "prettier.enable": false,
+ "editor.formatOnSave": false,
+ "markdown.validate.ignoredLinks": ["#%EF%B8%8F-available-styles", "#-custom-colors"]
 }
