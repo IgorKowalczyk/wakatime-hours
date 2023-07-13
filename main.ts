@@ -1,8 +1,8 @@
 import { makeBadge } from "https://esm.sh/badge-maker@3.3.1";
 import type { Format } from "https://esm.sh/badge-maker@3.3.1";
 import { Buffer } from "https://esm.sh/buffer@6.0.3";
-import { load } from "https://deno.land/std@0.182.0/dotenv/mod.ts";
-import LRU from "https://esm.sh/lru-cache@8.0.4";
+import { load } from "https://deno.land/std@0.194.0/dotenv/mod.ts";
+import { LRUCache } from "https://esm.sh/lru-cache@10.0.0";
 
 type BadgeProps = {
  label?: string;
@@ -15,7 +15,7 @@ const env = await load();
 const port = parseInt(Deno.env.get("PORT") as string) || parseInt(env["PORT"]) || 8080;
 const server = Deno.listen({ port: port });
 
-const cache = new LRU({
+const cache = new LRUCache({
  max: 1,
  ttl: 1000 * 60 * 60, // 1 hour
 });
@@ -49,12 +49,13 @@ async function serveHttp(conn: Deno.Conn) {
      headers: {
       Location: "/api/badge",
      },
-    }),
+    })
    );
    continue;
   }
 
   const { label, labelColor, color, style } = Object.fromEntries(new URLSearchParams(url.search)) as BadgeProps;
+  const start = Date.now();
 
   if (cache.has("data")) {
    const badge = makeBadge({
@@ -71,10 +72,11 @@ async function serveHttp(conn: Deno.Conn) {
      headers: {
       "Content-Type": "image/svg+xml",
       "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600",
-      "Vary": "Accept-Encoding",
+      Vary: "Accept-Encoding",
       "x-server-cache": "HIT",
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
      },
-    }),
+    })
    );
    continue;
   }
@@ -109,10 +111,11 @@ async function serveHttp(conn: Deno.Conn) {
     headers: {
      "Content-Type": "image/svg+xml",
      "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600",
-     "Vary": "Accept-Encoding",
+     Vary: "Accept-Encoding",
      "x-server-cache": "MISS",
+     "Server-Timing": `response;dur=${Date.now() - start}ms`,
     },
-   }),
+   })
   );
  }
 }
