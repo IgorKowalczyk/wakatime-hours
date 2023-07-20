@@ -3,8 +3,8 @@
  "tasks": {
   "dev": "deno run --watch --allow-net --allow-env --allow-read main.ts",
   "start": "deno run --allow-net --allow-env --allow-read main.ts",
-  "format": "deno fmt",
-  "format:check": "deno fmt --check",
+  "fmt": "deno fmt",
+  "fmt:check": "deno fmt --check",
   "lint": "deno lint"
  },
  "compilerOptions": {
