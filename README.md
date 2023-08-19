@@ -20,7 +20,7 @@
 
 ---
 
-> [!WARNING]
+> [!IMPORTANT]
 > In order to display your statistics you need to host this API yourself, for this I recommend using [Deno Deploy](https://deno.com/deploy).
 
 > [!NOTE]
