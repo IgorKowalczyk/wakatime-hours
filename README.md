@@ -20,10 +20,10 @@
 
 ---
 
-> **Warning**:
+> [!WARNING]
 > In order to display your statistics you need to host this API yourself, for this I recommend using [Deno Deploy](https://deno.com/deploy).
 
-> **Note**:
+> [!NOTE]
 > Don't forget to replace example `YOUR-DEPLOY` parameter with real value.
 
 ## 🖥️ Hosting with Deno Deploy
@@ -67,7 +67,7 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 
 ## 🖼️ Available styles
 
-> **Note**:
+> [!NOTE]
 > The default style is `flat`
 
 | Style           | Example                                                            | Usage                 |
@@ -78,12 +78,12 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 | `plastic`       | ![](https://wakatime-hours.deno.dev/api/badge?style=plastic)       | `style=plastic`       |
 | `social`        | ![](https://wakatime-hours.deno.dev/api/badge?style=social)        | `style=social`        |
 
-> **Note**:
+> [!NOTE]
 > To apply the style, add to the URL `?style=YOUR-STYLE`, if you use other parameters you can use `&style=YOUR-STYLE`
 
 ## 🎨 Custom colors
 
-> **Note**:
+> [!NOTE]
 > The default color is `blue`
 
 | Color         | Example                                                                     | Usage               | Label Color                                                                      | Label usage              |
@@ -100,10 +100,10 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 | `blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
 | `ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
 
-> **Note**:
+> [!NOTE]
 > To apply the style, add to the URL `?color=YOUR-COLOR`, if you use other parameters you can use `&color=YOUR-COLOR`
 
-> **Warning**:
+> [!WARNING]
 > HEX colors should be used without `#` symbol prefix.
 
 ## 📝 Custom text
@@ -112,7 +112,7 @@ You can overwrite default `Wakatime` text with your own label.
 
 ![](https://wakatime-hours.deno.dev/api/badge?label=Your+own+label&color=blue)
 
-> **Note**:
+> [!NOTE]
 > Replace whitespace with `+` character in multi-word labels.
 
 ```markdown
