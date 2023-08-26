@@ -1,4 +1,5 @@
-![og-image](https://user-images.githubusercontent.com/49127376/213679714-1f9fe70b-b815-40f1-9448-8035591ff5bc.png)
+![Wakatime Hours](https://github.com/IgorKowalczyk/wakatime-hours/assets/49127376/b9480230-179b-4d24-9828-ef074a4d1d1a)
+
 
 <div align="center">
  <a aria-label="Powered by" href="https://wakatime-hours.deno.dev">
