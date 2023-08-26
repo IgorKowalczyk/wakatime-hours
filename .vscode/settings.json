@@ -3,5 +3,5 @@
  "deno.enable": true,
  "prettier.enable": false,
  "editor.formatOnSave": false,
- "markdown.validate.ignoredLinks": ["#%EF%B8%8F-available-styles", "#-custom-colors"]
+ "markdown.validate.enabled": false
 }
