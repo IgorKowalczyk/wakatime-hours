@@ -1,6 +1,5 @@
 ![Wakatime Hours](https://github.com/IgorKowalczyk/wakatime-hours/assets/49127376/b9480230-179b-4d24-9828-ef074a4d1d1a)
 
-
 <div align="center">
  <a aria-label="Powered by" href="https://wakatime-hours.deno.dev">
   <img src="https://img.shields.io/static/v1?label=Powered%20by&message=Deno&color=blue&logo=deno">
