@@ -13,9 +13,6 @@
  <a aria-label="Version" href="https://github.com/igorkowalczyk/wakatime-hours/releases">
   <img src="https://img.shields.io/github/v/release/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=Version">
  </a>
- <br/>
- <br/>
- <b>Generate a badge that shows actual hours spent programming using WakaTime</b>
 </div>
 
 ---
