@@ -48,7 +48,7 @@
 
 ## ▲ Hosting with Vercel
 
-> **Warning**: <br/>
+> [!WARNING]
 > **This API no longer supports Vercel hosting.** But if you want to host this API on Vercel, **you can use old version of this API (`>= 2.x.x`)** which is available [here](https://github.com/IgorKowalczyk/wakatime-hours/releases/tag/v2.1.0).
 
 > **The old version of this API is no longer supported and will not receive any updates!**
@@ -116,7 +116,7 @@ You can overwrite default `Wakatime` text with your own label.
 > Replace whitespace with `+` character in multi-word labels.
 
 ```markdown
-![](https://YOUR-DEPLOY/api/badge?label=Your+own+label)
+![Wakatime Hours](https://YOUR-DEPLOY/api/badge?label=Your+own+label)
 ```
 
 ## ⁉️ Issues
