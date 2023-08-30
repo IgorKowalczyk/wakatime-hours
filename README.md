@@ -1,4 +1,4 @@
-![Wakatime Hours](https://github.com/IgorKowalczyk/wakatime-hours/assets/49127376/b9480230-179b-4d24-9828-ef074a4d1d1a)
+![Wakatime Hours](https://github.com/IgorKowalczyk/wakatime-hours/assets/49127376/d47625a9-5232-444f-9279-ce30aa69b5ca)
 
 <div align="center">
  <a aria-label="Powered by" href="https://wakatime-hours.deno.dev">
