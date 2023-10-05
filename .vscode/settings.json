@@ -1,11 +1,7 @@
 {
+ "markdown.validate.fragmentLinks.enabled": "ignore",
  "markdown.validate.referenceLinks.enabled": "ignore",
- "eslint.validate": [
-  "javascript",
-  "javascriptreact",
-  "typescript",
-  "typescriptreact"
- ],
+ "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
  "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
  },
