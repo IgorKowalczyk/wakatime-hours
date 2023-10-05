@@ -1,7 +1,13 @@
 {
- "eslint.enable": false,
- "deno.enable": true,
- "prettier.enable": false,
- "editor.formatOnSave": false,
- "markdown.validate.enabled": false
+ "markdown.validate.referenceLinks.enabled": "ignore",
+ "eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact"
+ ],
+ "editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+ },
+ "deno.enable": true
 }
