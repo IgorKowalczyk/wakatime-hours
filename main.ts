@@ -1,8 +1,8 @@
 import { makeBadge } from "https://esm.sh/badge-maker@3.3.1";
 import type { Format } from "https://esm.sh/badge-maker@3.3.1";
 import { Buffer } from "https://esm.sh/buffer@6.0.3";
-import { load } from "https://deno.land/std@0.194.0/dotenv/mod.ts";
-import { LRUCache } from "https://esm.sh/lru-cache@10.0.0";
+import { load } from "https://deno.land/std@0.208.0/dotenv/mod.ts";
+import { LRUCache } from "https://esm.sh/lru-cache@10.1.0";
 
 type BadgeProps = {
  label?: string;
@@ -35,7 +35,7 @@ async function serveHttp(conn: Deno.Conn) {
 
  for await (const requestEvent of httpConn) {
   if (requestEvent.request.method !== "GET") {
-   requestEvent.respondWith(new Response("Invaild method!", { status: 405 }));
+   requestEvent.respondWith(new Response("Invaild method! Use GET instead.", { status: 405 }));
    continue;
   }
 
@@ -74,7 +74,9 @@ async function serveHttp(conn: Deno.Conn) {
       "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600",
       Vary: "Accept-Encoding",
       "x-server-cache": "HIT",
-      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+      ...(Deno.env.get("NODE_ENV") !== "development" && {
+       "Server-Timing": `response;dur=${Date.now() - start}ms`,
+      }),
      },
     }),
    );
@@ -89,7 +91,20 @@ async function serveHttp(conn: Deno.Conn) {
   });
 
   if (!response.ok) {
-   requestEvent.respondWith(new Response("Internal server error!", { status: 500 }));
+   requestEvent.respondWith(
+    new Response(makeBadge({ label: "Error", message: "Internal server error!", color: "red", style: "flat" }), {
+     status: 500,
+     headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600",
+      Vary: "Accept-Encoding",
+      "x-server-cache": "MISS",
+      ...(Deno.env.get("NODE_ENV") !== "development" && {
+       "Server-Timing": `response;dur=${Date.now() - start}ms`,
+      }),
+     },
+    }),
+   );
    continue;
   }
 
@@ -113,7 +128,9 @@ async function serveHttp(conn: Deno.Conn) {
      "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600",
      Vary: "Accept-Encoding",
      "x-server-cache": "MISS",
-     "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     ...(Deno.env.get("NODE_ENV") !== "development" && {
+      "Server-Timing": `response;dur=${Date.now() - start}ms`,
+     }),
     },
    }),
   );

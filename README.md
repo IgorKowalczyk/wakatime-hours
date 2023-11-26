@@ -45,8 +45,12 @@
 
 ## ▲ Hosting with Vercel
 
+<!-- prettier-ignore-start -->
+
 > [!WARNING]
 > **This API no longer supports Vercel hosting.** But if you want to host this API on Vercel, **you can use old version of this API (`>= 2.x.x`)** which is available [here](https://github.com/IgorKowalczyk/wakatime-hours/releases/tag/v2.1.0).
+
+<!-- prettier-ignore-end -->
 
 > **The old version of this API is no longer supported and will not receive any updates!**
 
@@ -115,6 +119,16 @@ You can overwrite default `Wakatime` text with your own label.
 ```markdown
 ![Wakatime Hours](https://YOUR-DEPLOY/api/badge?label=Your+own+label)
 ```
+
+## 📊 Getting Wakatime API Key
+
+1. Go to [Wakatime](https://wakatime.com) and login to your account
+2. Go to [API Keys](https://wakatime.com/settings/api-key) page and copy your API Key
+3. Paste your API Key to `.env` file or add it as environment variable on your hosting
+4. Restart your API if needed
+
+> [!IMPORTANT]
+> Wakatime API Key is super secret, better to not share it. If you share it, anyone can use your API Key to get or modify your statistics.
 
 ## ⁉️ Issues
 
