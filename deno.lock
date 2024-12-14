@@ -1,25 +1,57 @@
 {
-  "version": "3",
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/bytes@^1.0.2": "1.0.4",
+    "jsr:@std/dotenv@0.225.3": "0.225.3",
+    "jsr:@std/io@0.225.0": "0.225.0",
+    "npm:@types/node@*": "22.5.4"
+  },
+  "jsr": {
+    "@std/bytes@1.0.4": {
+      "integrity": "11a0debe522707c95c7b7ef89b478c13fb1583a7cfb9a85674cd2cc2e3a28abc"
+    },
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    },
+    "@std/io@0.225.0": {
+      "integrity": "c1db7c5e5a231629b32d64b9a53139445b2ca640d828c26bf23e1c55f8c079b3",
+      "dependencies": [
+        "jsr:@std/bytes"
+      ]
+    }
+  },
+  "npm": {
+    "@types/node@22.5.4": {
+      "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "undici-types@6.19.8": {
+      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
+    }
+  },
   "remote": {
-    "https://deno.land/std@0.194.0/collections/filter_values.ts": "5b9feaf17b9a6e5ffccdd36cf6f38fa4ffa94cff2602d381c2ad0c2a97929652",
-    "https://deno.land/std@0.194.0/collections/without_all.ts": "a89f5da0b5830defed4f59666e188df411d8fece35a5f6ca69be6ca71a95c185",
-    "https://deno.land/std@0.194.0/dotenv/mod.ts": "39e5d19e077e55d7e01ea600eb1c6d1e18a8dfdfc65d68826257a576788da3a4",
     "https://deno.land/std@0.208.0/dotenv/mod.ts": "039468f5c87d39b69d7ca6c3d68ebca82f206ec0ff5e011d48205eea292ea5a6",
-    "https://esm.sh/badge-maker@3.3.1": "dab6044080fbfe9119bb5f887bb26bb3dba26c1c483174935c1c3dc4a6c9d58d",
-    "https://esm.sh/buffer@6.0.3": "8f5a9e4e338659848df874d8cdbfb65611af358e30940a46e44fe335c6d358ab",
-    "https://esm.sh/lru-cache@10.0.0": "e4fa58517b79bbbb3d44cdc994c712f7e8dabcc07013916599e94833996712c1",
+    "https://esm.sh/badge-maker@3.3.1": "6936b6be433d90f782befe196e62cc74c4d6011816261a936f9e9101b03470d0",
+    "https://esm.sh/buffer@6.0.3": "6c83bf9cd2aa8d70f2695784bb527fd671bb83797f4cbf20eafdff9b10b6b0cc",
     "https://esm.sh/lru-cache@10.1.0": "5a5e773a0c61d5bb74c153d9ea96ab7791b4b031363a013bb1d727ceb40d01cd",
-    "https://esm.sh/v127/anafanafo@2.0.0/denonext/anafanafo.mjs": "7858882a820a2ee6c27e52c22f39cdb9024883ef3c92ba1416cd7e3b1d8447c5",
-    "https://esm.sh/v127/badge-maker@3.3.1/denonext/badge-maker.mjs": "d0f3d81bed4a6792830bb90405ffeed1cb9b220539854d7b66256249b90dab53",
-    "https://esm.sh/v127/binary-search@1.3.6/denonext/binary-search.mjs": "e53e6e937aa01c06a13753beb7b630bb8e62a5f956119e84ad37f42fcfcdcc6e",
-    "https://esm.sh/v127/char-width-table-consumer@1.0.0/denonext/char-width-table-consumer.mjs": "be43268048cbd636ff55838e4f77acad7112b82ff02aac5085b9b940ec49568c",
-    "https://esm.sh/v127/color-name@1.1.4/denonext/color-name.mjs": "88abd3b0b19ef92d342221b38dc51760a4bab4540308c2dcb9db3c2cc68e5986",
-    "https://esm.sh/v127/css-color-converter@2.0.0/denonext/css-color-converter.mjs": "f6dd72fcdffbcf664ad9c5a7040410b08e5767baf2e9826da1ace3c7c50692f8",
-    "https://esm.sh/v127/css-unit-converter@1.1.2/denonext/css-unit-converter.mjs": "293def11db92837966a9c9efc5c32772f60e900cb22e512f1776bcffeea812b1",
-    "https://esm.sh/v128/base64-js@1.5.1/denonext/base64-js.mjs": "fc961905a7e7a9a1c753f006903a610306d299569a0b3af9c48318a28ac48b84",
-    "https://esm.sh/v128/buffer@6.0.3/denonext/buffer.mjs": "2532b5597e5f3bdd63967089de1f509bda7379ca85d07f1609d3c4e35907c4ac",
-    "https://esm.sh/v128/ieee754@1.2.1/denonext/ieee754.mjs": "9ec2806065f50afcd4cf3f3f2f38d93e777a92a5954dda00d219f57d4b24832f",
-    "https://esm.sh/v128/lru-cache@10.0.0/denonext/lru-cache.mjs": "07c4092705d4cd15c57cd7c04de101373d67c2b2440ff668644e73fa46e443a1",
+    "https://esm.sh/v135/anafanafo@2.0.0/denonext/anafanafo.mjs": "665320ad84725d20eb2224bec9e54fa02e9958c63a7cf34b6ff3d3d4863ac34a",
+    "https://esm.sh/v135/badge-maker@3.3.1/denonext/badge-maker.mjs": "e11d8169ded0ba2d5bc4815ebf83e75102722d37517700483d685e4734eb2ebe",
+    "https://esm.sh/v135/base64-js@1.5.1/denonext/base64-js.mjs": "37ce4431d0b110375d0cafee5cb015592b09352595aca9393e5ecf417f71fae2",
+    "https://esm.sh/v135/binary-search@1.3.6/denonext/binary-search.mjs": "e53e6e937aa01c06a13753beb7b630bb8e62a5f956119e84ad37f42fcfcdcc6e",
+    "https://esm.sh/v135/buffer@6.0.3/denonext/buffer.mjs": "1c26f712283012aa7a7ce8e55279241ee7aa84bf936f746a5fec2ea5011ab7df",
+    "https://esm.sh/v135/char-width-table-consumer@1.0.0/denonext/char-width-table-consumer.mjs": "dce9ba108702c2e40da2e4c0979d4f886f907e77d1e8ae867a17a0d9a3a0c078",
+    "https://esm.sh/v135/color-name@1.1.4/denonext/color-name.mjs": "88abd3b0b19ef92d342221b38dc51760a4bab4540308c2dcb9db3c2cc68e5986",
+    "https://esm.sh/v135/css-color-converter@2.0.0/denonext/css-color-converter.mjs": "b579fe68563a90fc6e17749fef86c90e437a6ce4d1e196e02b3bbd88c0e96059",
+    "https://esm.sh/v135/css-unit-converter@1.1.2/denonext/css-unit-converter.mjs": "293def11db92837966a9c9efc5c32772f60e900cb22e512f1776bcffeea812b1",
+    "https://esm.sh/v135/ieee754@1.2.1/denonext/ieee754.mjs": "9ec2806065f50afcd4cf3f3f2f38d93e777a92a5954dda00d219f57d4b24832f",
     "https://esm.sh/v135/lru-cache@10.1.0/denonext/lru-cache.mjs": "8eccca15513d8d1e660969697e34dd104c57dfbe3f20f0e88e04650a3e1bd93a"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/dotenv@0.225.3",
+      "jsr:@std/io@0.225.0"
+    ]
   }
 }

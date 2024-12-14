@@ -2,13 +2,10 @@
  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
  "tasks": {
   "dev": "deno run --watch --allow-net --allow-env --allow-read main.ts",
-  "start": "deno run --allow-net --allow-env --allow-read main.ts",
-  "fmt": "deno fmt",
-  "fmt:check": "deno fmt --check",
-  "lint": "deno lint"
+  "start": "deno run --allow-net --allow-env --allow-read main.ts"
  },
  "compilerOptions": {
-  "checkJs": false
+  "checkJs": true
  },
  "fmt": {
   "include": ["."],
@@ -23,5 +20,9 @@
   "rules": {
    "tags": ["recommended"]
   }
+ },
+ "imports": {
+  "@std/dotenv": "jsr:@std/dotenv@0.225.3",
+  "@std/io": "jsr:@std/io@0.225.0"
  }
 }
