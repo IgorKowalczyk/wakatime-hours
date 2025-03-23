@@ -1,3 +1,5 @@
 {
- "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"]
+  "extends": [
+    "github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"
+  ]
 }

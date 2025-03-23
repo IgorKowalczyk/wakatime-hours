@@ -1,11 +1,8 @@
 ![Wakatime Hours](https://github.com/IgorKowalczyk/wakatime-hours/assets/49127376/d47625a9-5232-444f-9279-ce30aa69b5ca)
 
 <div align="center">
- <a aria-label="Powered by" href="https://wakatime-hours.deno.dev">
-  <img src="https://img.shields.io/static/v1?label=Powered%20by&message=Deno&color=blue&logo=deno">
- </a>
- <a aria-label="Badge" href="https://wakatime-hours.deno.dev">
-  <img src="https://wakatime-hours.deno.dev/api/badge">
+ <a aria-label="Badge" href="https://wakatime.igorkowalczyk.dev">
+  <img src="https://wakatime.igorkowalczyk.dev/api/badge">
  </a>
  <a aria-label="Github License" href="https://github.com/igorkowalczyk/wakatime-hours/blob/main/license.md">
   <img src="https://img.shields.io/github/license/igorkowalczyk/wakatime-hours?color=blue&logo=github&label=License">
@@ -18,41 +15,37 @@
 ---
 
 > [!IMPORTANT]
-> In order to display your statistics you need to host this API yourself, for this I recommend using [Deno Deploy](https://deno.com/deploy).
+> In order to display your statistics you need to host this API yourself, for this I recommend using [Cloudflare Workers](#️-hosting-with-cloudflare-workers)
 
-> [!NOTE]
-> Don't forget to replace example `YOUR-DEPLOY` parameter with real value.
-
-## 🖥️ Hosting with Deno Deploy
-
-1. Fork [this repository](https://github.com/IgorKowalczyk/wakatime-hours)
-2. Go to [Deno Deploy](https://deno.com/deploy) and connect your GitHub account
-3. Click `New Project` and select your forked repository
-4. Select `main` branch
-5. Add `WAKATIME_API_KEY` environment variable with your Wakatime API Key
-6. Click `Link`
-7. Visit `https://YOUR-DEPLOY/api/badge` in your browser
-
-## 🔩 Self Hosting
+## 🌐 Hosting with Cloudflare Workers
 
 1. Clone [this repository](https://github.com/igorkowalczyk/wakatime-hours) `git clone https://github.com/IgorKowalczyk/wakatime-hours`
-2. Create new file named `.env` Remember - the file is super secret, better to not share it.
-3. In `.env` file set this values:
-   - `WAKATIME_API_KEY` - Your Wakatime API Key
-   - `PORT` - Port on which the API will be available (optional, default: `8080`)
-4. Run `deno task dev` to start the project in development mode or `deno task start` to run the project in production mode.
-5. Visit `http://localhost:8080` in your browser _(or `http://localhost:${PORT}` if you set custom port)_
+2. Install dependencies `pnpm install`
+3. Create new file named `.dev.vars`. Remember - the file is super secret, better to not share it!
+4. In `.dev.vars` file set this values (`.env` file syntax):
+   - `WAKATIME_API_KEY` - Your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
+5. Edit `wrangler.jsonc` file and set your `name`, `routes` or other settings if needed
+6. Run `wrangler dev` to start the project in development mode or `wrangler deploy` to deploy the project to Cloudflare Workers
+7. Visit `https://YOUR-DEPLOY/api/badge` in your browser
 
-## ▲ Hosting with Vercel
+> [!NOTE]
+> If you wish to host this API on a different platform, refer to the [Hono documentation](https://hono.dev/docs/getting-started/basic) for deployment instructions. You may need to modify the code to work with your hosting provider.
 
-<!-- prettier-ignore-start -->
+## 🔩 Local development
 
-> [!WARNING]
-> **This API no longer supports Vercel hosting.** But if you want to host this API on Vercel, **you can use old version of this API (`>= 2.x.x`)** which is available [here](https://github.com/IgorKowalczyk/wakatime-hours/releases/tag/v2.1.0).
+1. Clone [this repository](https://github.com/igorkowalczyk/wakatime-hours) `git clone https://github.com/IgorKowalczyk/wakatime-hours`
+2. Install dependencies `pnpm install`
+3. Create new file named `.dev.vars`. Remember - the file is super secret, better to not share it!
+4. In `.dev.vars` file set this values (`.env` file syntax):
+   - `WAKATIME_API_KEY` - Your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
+5. Run `pnpm dev` to start the project in development mode
+6. Visit `http://localhost:8787/api/badge` in your browser
 
-<!-- prettier-ignore-end -->
+## 🚀 Getting Wakatime API key
 
-> **The old version of this API is no longer supported and will not receive any updates!**
+1. Go to [Wakatime](https://wakatime.com) and login to your account
+2. Go to [API Keys](https://wakatime.com/settings/api-key) page and copy your API Key. This key is super secret, better to not share it.
+3. Paste your API Key to `.dev.vars` file or add it as environment variable on your hosting
 
 ## 🗜️ API Usage
 
@@ -71,13 +64,13 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 > [!NOTE]
 > The default style is `flat`
 
-| Style           | Example                                                            | Usage                 |
-| --------------- | ------------------------------------------------------------------ | --------------------- |
-| `flat`          | ![](https://wakatime-hours.deno.dev/api/badge?style=flat)          | `style=flat`          |
-| `flat-square`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat-square)   | `style=flat-square`   |
-| `for-the-badge` | ![](https://wakatime-hours.deno.dev/api/badge?style=for-the-badge) | `style=for-the-badge` |
-| `plastic`       | ![](https://wakatime-hours.deno.dev/api/badge?style=plastic)       | `style=plastic`       |
-| `social`        | ![](https://wakatime-hours.deno.dev/api/badge?style=social)        | `style=social`        |
+| Style           | Example                                                               | Usage                 |
+| --------------- | --------------------------------------------------------------------- | --------------------- |
+| `flat`          | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat)          | `style=flat`          |
+| `flat-square`   | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat-square)   | `style=flat-square`   |
+| `for-the-badge` | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=for-the-badge) | `style=for-the-badge` |
+| `plastic`       | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=plastic)       | `style=plastic`       |
+| `social`        | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=social)        | `style=social`        |
 
 > [!NOTE]
 > To apply the style, add to the URL `?style=YOUR-STYLE`, if you use other parameters you can use `&style=YOUR-STYLE`
@@ -87,19 +80,19 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 > [!NOTE]
 > The default color is `blue`
 
-| Color         | Example                                                                     | Usage               | Label Color                                                                      | Label usage              |
-| ------------- | --------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------- | ------------------------ |
-| `brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
-| `green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
-| `yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
-| `yellowgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=yellowgreen) | `labelColor=yellowgreen` |
-| `orange`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=orange)      | `color=orange`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=orange)      | `labelColor=orange`      |
-| `red`         | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=red)         | `color=red`         | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=red)         | `labelColor=red`         |
-| `blue`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=blue)        | `color=blue`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=blue)        | `labelColor=blue`        |
-| `grey`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=grey)        | `color=grey`        | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=grey)        | `labelColor=grey`        |
-| `lightgrey`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=lightgrey)   | `color=lightgrey`   | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=lightgrey)   | `labelColor=lightgrey`   |
-| `blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
-| `ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime-hours.deno.dev/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
+| Color         | Example                                                                        | Usage               | Label Color                                                                         | Label usage              |
+| ------------- | ------------------------------------------------------------------------------ | ------------------- | ----------------------------------------------------------------------------------- | ------------------------ |
+| `brightgreen` | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=brightgreen) | `color=brightgreen` | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=brightgreen) | `labelColor=brightgreen` |
+| `green`       | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=green)       | `color=green`       | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=green)       | `labelColor=green`       |
+| `yellow`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=yellow)      | `color=yellow`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=yellow)      | `labelColor=yellow`      |
+| `yellowgreen` | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=yellowgreen) | `color=yellowgreen` | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=yellowgreen) | `labelColor=yellowgreen` |
+| `orange`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=orange)      | `color=orange`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=orange)      | `labelColor=orange`      |
+| `red`         | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=red)         | `color=red`         | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=red)         | `labelColor=red`         |
+| `blue`        | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=blue)        | `color=blue`        | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=blue)        | `labelColor=blue`        |
+| `grey`        | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=grey)        | `color=grey`        | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=grey)        | `labelColor=grey`        |
+| `lightgrey`   | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=lightgrey)   | `color=lightgrey`   | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=lightgrey)   | `labelColor=lightgrey`   |
+| `blueviolet`  | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=blueviolet)  | `color=blueviolet`  | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=blueviolet)  | `labelColor=blueviolet`  |
+| `ff69b4`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&color=ff69b4)      | `color=ff69b4`      | ![](https://wakatime.igorkowalczyk.dev/api/badge?style=flat&labelColor=ff69b4)      | `labelColor=ff69b4`      |
 
 > [!NOTE]
 > To apply the style, add to the URL `?color=YOUR-COLOR`, if you use other parameters you can use `&color=YOUR-COLOR`
@@ -111,7 +104,7 @@ GET https://YOUR-DEPLOY/api/badge?style=${style}&color=${color}&label=${label}
 
 You can overwrite default `Wakatime` text with your own label.
 
-![](https://wakatime-hours.deno.dev/api/badge?label=Your+own+label&color=blue)
+![](https://wakatime.igorkowalczyk.dev/api/badge?label=Your+own+label&color=blue)
 
 > [!NOTE]
 > Replace whitespace with `+` character in multi-word labels.

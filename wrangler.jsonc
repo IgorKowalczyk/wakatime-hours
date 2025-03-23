@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+  },
+  "placement": { "mode": "smart" },
+  "send_metrics": false,
+
+  // Name of your Cloudflare Worker, you can change it to whatever you want
+  "name": "wakatime-hours",
+
+  // Custom domain, you can use your own domain connected to Cloudflare
+  "routes": [
+    {
+      "pattern": "wakatime.igorkowalczyk.dev",
+      "custom_domain": true,
+    },
+  ],
+
+  // If you want to have a deployment domain like "..workers.dev" you can set the "workers_dev" field to true
+  "workers_dev": false,
+
+  // If you want to have a preview URL like "..workers.dev" you can set the "preview_urls" field to true
+  "preview_urls": true,
+}
