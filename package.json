@@ -44,5 +44,5 @@
   "prettier": "3.5.3",
   "wrangler": "4.4.0"
  },
- "packageManager": "pnpm@10.6.4"
+ "packageManager": "pnpm@10.6.5"
 }
