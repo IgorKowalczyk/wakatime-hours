@@ -6,6 +6,7 @@ export default [
   ...eslintConfig.base,
   ...eslintConfig.node,
   ...eslintConfig.typescript,
+  ...eslintConfig.prettier,
   {
     ignores: ["worker-configuration.d.ts"],
   },

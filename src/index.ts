@@ -42,7 +42,7 @@ app.get("/api/badge", zValidator("query", BadgePropsSchema), async (c) => {
           Vary: "Accept-Encoding",
           "x-server-cache": "MISS",
         },
-      }
+      },
     );
   }
 
@@ -78,7 +78,7 @@ app.get("/api/badge", zValidator("query", BadgePropsSchema), async (c) => {
       headers: {
         Authorization: `Basic ${token}`,
       },
-    }
+    },
   );
 
   if (!response.ok) {
@@ -98,7 +98,7 @@ app.get("/api/badge", zValidator("query", BadgePropsSchema), async (c) => {
           Vary: "Accept-Encoding",
           "x-server-cache": "MISS",
         },
-      }
+      },
     );
   }
 
