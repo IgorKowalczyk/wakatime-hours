@@ -1,0 +1,9 @@
+# Modules
+node_modules
+
+# Packages
+pnpm-lock.yaml
+package.json
+
+# Cloudflare
+worker-configuration.d.ts
