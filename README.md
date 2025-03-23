@@ -21,13 +21,10 @@
 
 1. Clone [this repository](https://github.com/igorkowalczyk/wakatime-hours) `git clone https://github.com/IgorKowalczyk/wakatime-hours`
 2. Install dependencies `pnpm install`
-3. Create new file named `.dev.vars`. Remember - the file is super secret, better to not share it!
-4. In `.dev.vars` file set this values (`.env` file syntax):
-   - `WAKATIME_API_KEY` - Your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
-5. Edit `wrangler.jsonc` file and set your `name`, `routes` or other settings if needed
-6. Run `wrangler dev` to start the project in development mode or `wrangler deploy` to deploy the project to Cloudflare Workers
-7. Run `pnpm wrangler secret put WAKATIME_API_KEY` and paste your Wakatime API Key
-8. Visit `https://YOUR-DEPLOY/api/badge` in your browser
+3. Edit `wrangler.jsonc` file and set your `name`, `routes` or other settings if needed
+4. Run `wrangler dev` to start the project in development mode or `wrangler deploy` to deploy the project to Cloudflare Workers
+5. Run `pnpm wrangler secret put WAKATIME_API_KEY` and paste your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
+6. Visit `https://YOUR-DEPLOY/api/badge` in your browser
 
 > [!NOTE]
 > If you wish to host this API on a different platform, refer to the [Hono documentation](https://hono.dev/docs/getting-started/basic) for deployment instructions. You may need to modify the code to work with your hosting provider.
