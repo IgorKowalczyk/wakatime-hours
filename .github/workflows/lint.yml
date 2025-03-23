@@ -1,17 +1,28 @@
-name: Format check
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
- check:
-  name: Format check
-  runs-on: ubuntu-latest
-  steps:
-   - name: 🧱 Clone repository
-     uses: actions/checkout@v4
-   - name: 🔩 Install Deno
-     uses: denoland/setup-deno@v2
-     with:
-      deno-version: v2.x
-   - name: 🚀 Check lint
-     run: deno lint
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["lts/*"]
+    steps:
+      - name: 🧱 Checkout repository
+        uses: actions/checkout@v4
+      - name: 🔩 Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          standalone: true
+      - name: 🔩 Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "pnpm"
+      - name: 🚀 Install dependencies
+        run: pnpm install
+      - name: 🚀 Run ESLint
+        run: pnpm lint
