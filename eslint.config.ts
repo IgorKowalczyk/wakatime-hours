@@ -1,13 +1,11 @@
 import eslintConfig from "@igorkowalczyk/eslint-config";
-import { Linter } from "eslint";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-export default [
+export default defineConfig([
  // prettier
- ...eslintConfig.base,
- ...eslintConfig.node,
- ...eslintConfig.typescript,
- ...eslintConfig.prettier,
- {
-  ignores: ["worker-configuration.d.ts"],
- },
-] satisfies Linter.Config[];
+ eslintConfig.base,
+ eslintConfig.node,
+ eslintConfig.typescript,
+ eslintConfig.prettier,
+ globalIgnores(["worker-configuration.d.ts"], "Ignore worker-configuration.d.ts file"),
+]);

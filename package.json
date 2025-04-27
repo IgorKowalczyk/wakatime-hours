@@ -30,7 +30,7 @@
     "cloudflare"
   ],
   "dependencies": {
-    "@hono/zod-validator": "0.4.3",
+    "@hono/zod-validator": "0.5.0",
     "badge-maker": "4.1.0",
     "hono": "4.7.7",
     "lru-cache": "11.1.0",
@@ -38,8 +38,8 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250427.0",
-    "@igorkowalczyk/eslint-config": "3.0.7",
-    "@igorkowalczyk/prettier-config": "3.0.7",
+    "@igorkowalczyk/eslint-config": "3.0.8",
+    "@igorkowalczyk/prettier-config": "3.0.8",
     "eslint": "9.25.1",
     "prettier": "3.5.3",
     "wrangler": "4.13.2"
