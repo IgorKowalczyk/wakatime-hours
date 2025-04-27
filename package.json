@@ -40,7 +40,7 @@
     "@cloudflare/workers-types": "4.20250427.0",
     "@igorkowalczyk/eslint-config": "3.0.7",
     "@igorkowalczyk/prettier-config": "3.0.7",
-    "eslint": "9.25.0",
+    "eslint": "9.25.1",
     "prettier": "3.5.3",
     "wrangler": "4.13.2"
   },
