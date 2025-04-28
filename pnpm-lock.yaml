@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: 0.5.0
-        version: 0.5.0(hono@4.7.7)(zod@3.24.3)
+        version: 0.5.0(hono@4.7.8)(zod@3.24.3)
       badge-maker:
         specifier: 4.1.0
         version: 4.1.0
       hono:
-        specifier: 4.7.7
-        version: 4.7.7
+        specifier: 4.7.8
+        version: 4.7.8
       lru-cache:
         specifier: 11.1.0
         version: 11.1.0
@@ -1285,8 +1285,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.7.7:
-    resolution: {integrity: sha512-2PCpQRbN87Crty8/L/7akZN3UyZIAopSoRxCwRbJgUuV1+MHNFHzYFxZTg4v/03cXUm+jce/qa2VSBZpKBm3Qw==}
+  hono@4.7.8:
+    resolution: {integrity: sha512-PCibtFdxa7/Ldud9yddl1G81GjYaeMYYTq4ywSaNsYbB1Lug4mwtOMJf2WXykL0pntYwmpRJeOI3NmoDgD+Jxw==}
     engines: {node: '>=16.9.0'}
 
   ignore@5.3.2:
@@ -2174,9 +2174,9 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/zod-validator@0.5.0(hono@4.7.7)(zod@3.24.3)':
+  '@hono/zod-validator@0.5.0(hono@4.7.8)(zod@3.24.3)':
     dependencies:
-      hono: 4.7.7
+      hono: 4.7.8
       zod: 3.24.3
 
   '@humanfs/core@0.19.1': {}
@@ -3320,7 +3320,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.7.7: {}
+  hono@4.7.8: {}
 
   ignore@5.3.2: {}
 
