@@ -42,7 +42,7 @@
     "@igorkowalczyk/prettier-config": "3.0.8",
     "eslint": "9.26.0",
     "prettier": "3.5.3",
-    "wrangler": "4.14.2"
+    "wrangler": "4.14.4"
   },
   "packageManager": "pnpm@10.10.0"
 }
