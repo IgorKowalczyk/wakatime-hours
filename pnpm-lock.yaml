@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: 0.6.0
-        version: 0.6.0(hono@4.7.10)(zod@3.25.32)
+        version: 0.6.0(hono@4.7.10)(zod@3.25.36)
       badge-maker:
         specifier: 4.1.0
         version: 4.1.0
@@ -21,8 +21,8 @@ importers:
         specifier: 11.1.0
         version: 11.1.0
       zod:
-        specifier: 3.25.32
-        version: 3.25.32
+        specifier: 3.25.36
+        version: 3.25.36
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250529.0
@@ -1907,8 +1907,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.25.32:
-    resolution: {integrity: sha512-OSm2xTIRfW8CV5/QKgngwmQW/8aPfGdaQFlrGoErlgg/Epm7cjb6K6VEyExfe65a3VybUOnu381edLb0dfJl0g==}
+  zod@3.25.36:
+    resolution: {integrity: sha512-eRFS3i8T0IrpGdL8HQyqFAugGOn7jOjyGgGdtv5NY4Wkhi7lJDk732bNZ609YMIGFbLoaj6J69O1Mura23gfIw==}
 
 snapshots:
 
@@ -2180,10 +2180,10 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/zod-validator@0.6.0(hono@4.7.10)(zod@3.25.32)':
+  '@hono/zod-validator@0.6.0(hono@4.7.10)(zod@3.25.36)':
     dependencies:
       hono: 4.7.10
-      zod: 3.25.32
+      zod: 3.25.36
 
   '@humanfs/core@0.19.1': {}
 
@@ -4055,4 +4055,4 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@3.25.32: {}
+  zod@3.25.36: {}
