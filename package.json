@@ -30,7 +30,7 @@
     "cloudflare"
   ],
   "dependencies": {
-    "@hono/zod-validator": "0.6.0",
+    "@hono/zod-validator": "0.7.0",
     "badge-maker": "4.1.0",
     "hono": "4.7.11",
     "lru-cache": "11.1.0",
