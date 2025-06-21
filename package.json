@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "@hono/zod-validator": "0.7.0",
-    "badge-maker": "5.0.1",
+    "badge-maker": "5.0.2",
     "hono": "4.8.2",
     "lru-cache": "11.1.0",
     "zod": "3.25.67"
