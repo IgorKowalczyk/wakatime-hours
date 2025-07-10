@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: 0.7.0
-        version: 0.7.0(hono@4.8.4)(zod@3.25.74)
+        version: 0.7.0(hono@4.8.4)(zod@3.25.76)
       badge-maker:
         specifier: 5.0.2
         version: 5.0.2
@@ -21,8 +21,8 @@ importers:
         specifier: 11.1.0
         version: 11.1.0
       zod:
-        specifier: 3.25.74
-        version: 3.25.74
+        specifier: 3.25.76
+        version: 3.25.76
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250708.0
@@ -1971,8 +1971,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.25.74:
-    resolution: {integrity: sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg==}
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
 snapshots:
 
@@ -2167,7 +2167,7 @@ snapshots:
       '@eslint-react/eff': 1.52.2
       '@typescript-eslint/utils': 8.35.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.2)
       ts-pattern: 5.7.1
-      zod: 3.25.74
+      zod: 3.25.76
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -2179,7 +2179,7 @@ snapshots:
       '@eslint-react/kit': 1.52.2(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.2)
       '@typescript-eslint/utils': 8.35.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.2)
       ts-pattern: 5.7.1
-      zod: 3.25.74
+      zod: 3.25.76
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -2248,10 +2248,10 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/zod-validator@0.7.0(hono@4.8.4)(zod@3.25.74)':
+  '@hono/zod-validator@0.7.0(hono@4.8.4)(zod@3.25.76)':
     dependencies:
       hono: 4.8.4
-      zod: 3.25.74
+      zod: 3.25.76
 
   '@humanfs/core@0.19.1': {}
 
@@ -4185,4 +4185,4 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@3.25.74: {}
+  zod@3.25.76: {}
