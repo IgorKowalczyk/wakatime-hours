@@ -37,7 +37,7 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20250715.0",
+    "@cloudflare/workers-types": "4.20250724.0",
     "@igorkowalczyk/eslint-config": "3.1.0",
     "@igorkowalczyk/prettier-config": "3.1.0",
     "eslint": "9.31.0",
