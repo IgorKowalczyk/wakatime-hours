@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hono/zod-validator':
-        specifier: 0.7.1
-        version: 0.7.1(hono@4.8.5)(zod@4.0.8)
+        specifier: 0.7.2
+        version: 0.7.2(hono@4.8.5)(zod@4.0.8)
       badge-maker:
         specifier: 5.0.2
         version: 5.0.2
@@ -342,8 +342,8 @@ packages:
     resolution: {integrity: sha512-1+WqvgNMhmlAambTvT3KPtCl/Ibr68VldY2XY40SL1CE0ZXiakFR/cbTspaF5HsnpDMvcYYoJHfl4980NBjGag==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hono/zod-validator@0.7.1':
-    resolution: {integrity: sha512-8+vJT1RvezAx5sN7hiZ5Mis0RMuFL77nBEcqQQgT9ufoLkxr+7ll461WlBJQcGoQSY6EGMClVae19v3s/7bbgQ==}
+  '@hono/zod-validator@0.7.2':
+    resolution: {integrity: sha512-ub5eL/NeZ4eLZawu78JpW/J+dugDAYhwqUIdp9KYScI6PZECij4Hx4UsrthlEUutqDDhPwRI0MscUfNkvn/mqQ==}
     peerDependencies:
       hono: '>=3.9.0'
       zod: ^3.25.0 || ^4.0.0
@@ -2237,7 +2237,7 @@ snapshots:
       '@eslint/core': 0.15.1
       levn: 0.4.1
 
-  '@hono/zod-validator@0.7.1(hono@4.8.5)(zod@4.0.8)':
+  '@hono/zod-validator@0.7.2(hono@4.8.5)(zod@4.0.8)':
     dependencies:
       hono: 4.8.5
       zod: 4.0.8
