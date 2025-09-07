@@ -34,7 +34,7 @@
     "badge-maker": "5.0.2",
     "hono": "4.9.2",
     "lru-cache": "11.1.0",
-    "zod": "4.0.17"
+    "zod": "4.1.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250906.0",
