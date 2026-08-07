@@ -14,6 +14,9 @@
 
 ---
 
+> [!NOTE]
+> WakaTime has official total code time badges available from your [WakaTime profile](https://wakatime.com/me?badge=true).
+
 > [!IMPORTANT]
 > In order to display your statistics you need to host this API yourself, for this I recommend using [Cloudflare Workers](#️-hosting-with-cloudflare-workers)
 
