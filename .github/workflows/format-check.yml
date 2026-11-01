@@ -2,6 +2,7 @@ name: Prettier check
 
 on: [push, pull_request]
 
+jobs:
   check:
     name: Format check
     runs-on: ubuntu-latest
