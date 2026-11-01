@@ -30,19 +30,19 @@
     "cloudflare"
   ],
   "dependencies": {
-    "@hono/zod-validator": "0.7.2",
-    "badge-maker": "6.0.0",
-    "hono": "4.9.6",
-    "lru-cache": "11.2.1",
-    "zod": "4.1.5"
+    "@hono/zod-validator": "0.8.0",
+    "badge-maker": "5.0.2",
+    "hono": "4.12.23",
+    "lru-cache": "11.5.1",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20251003.0",
-    "@igorkowalczyk/eslint-config": "3.1.0",
-    "@igorkowalczyk/prettier-config": "3.1.0",
-    "eslint": "9.35.0",
-    "prettier": "3.6.2",
-    "wrangler": "4.34.0"
+    "@igorkowalczyk/eslint-config": "3.3.0",
+    "@igorkowalczyk/prettier-config": "3.3.0",
+    "@types/node": "^25.9.1",
+    "eslint": "10.4.1",
+    "prettier": "3.8.3",
+    "wrangler": "4.95.0"
   },
-  "packageManager": "pnpm@10.15.1"
+  "packageManager": "pnpm@11.5.0"
 }

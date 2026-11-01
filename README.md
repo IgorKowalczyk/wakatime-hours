@@ -23,7 +23,7 @@
 2. Install dependencies `pnpm install`
 3. Edit `wrangler.jsonc` file and set your `name`, `routes` or other settings if needed
 4. Run `wrangler dev` to start the project in development mode or `wrangler deploy` to deploy the project to Cloudflare Workers
-5. Run `pnpm wrangler secret put WAKATIME_API_KEY` and paste your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
+5. Run `pnpm wrangler secret put WAKATIME_API_KEY` and paste your WakaTime personal OAuth token, available [here](https://wakatime.com/oauth)
 6. Visit `https://YOUR-DEPLOY/api/badge` in your browser
 
 > [!NOTE]
@@ -35,15 +35,15 @@
 2. Install dependencies `pnpm install`
 3. Create new file named `.dev.vars`. Remember - the file is super secret, better to not share it!
 4. In `.dev.vars` file set this values (`.env` file syntax):
-   - `WAKATIME_API_KEY` - Your Wakatime API Key, you can get it [here](#-getting-wakatime-api-key)
+   - `WAKATIME_API_KEY` - Your WakaTime personal OAuth token, available [here](https://wakatime.com/oauth)
 5. Run `pnpm dev` to start the project in development mode
 6. Visit `http://localhost:8787/api/badge` in your browser
 
-## 🚀 Getting Wakatime API key
+## 🚀 Getting a WakaTime OAuth token
 
-1. Go to [Wakatime](https://wakatime.com) and login to your account
-2. Go to [API Keys](https://wakatime.com/settings/api-key) page and copy your API Key. This key is super secret, better to not share it.
-3. Paste your API Key to `.dev.vars` file or add it as environment variable on your hosting
+1. Sign in to your [WakaTime account](https://wakatime.com)
+2. Get your personal OAuth token from [wakatime.com/oauth](https://wakatime.com/oauth)
+3. Set the token as `WAKATIME_API_KEY` in `.dev.vars` or as a secret in your hosting provider.
 
 ## 🗜️ API Usage
 
@@ -111,15 +111,9 @@ You can overwrite default `Wakatime` text with your own label.
 ![Wakatime Hours](https://YOUR-DEPLOY/api/badge?label=Your+own+label)
 ```
 
-## 📊 Getting Wakatime API Key
+## 🔐 Token security
 
-1. Go to [Wakatime](https://wakatime.com) and login to your account
-2. Go to [API Keys](https://wakatime.com/settings/api-key) page and copy your API Key
-3. Paste your API Key to `.env` file or add it as environment variable on your hosting
-4. Restart your API if needed
-
-> [!IMPORTANT]
-> Wakatime API Key is super secret, better to not share it. If you share it, anyone can use your API Key to get or modify your statistics.
+Keep your OAuth token secret. Anyone with access to it may be able to access your WakaTime data.
 
 ## ⁉️ Issues
 

@@ -2,27 +2,26 @@ name: Prettier check
 
 on: [push, pull_request]
 
-jobs:
- check:
-  name: Format check
-  runs-on: ubuntu-latest
-  strategy:
-   fail-fast: false
-   matrix:
-    node: ["lts/*"]
-  steps:
-   - name: 🧱 Checkout repository
-     uses: actions/checkout@v7
-   - name: 🔩 Setup PNPM
-     uses: pnpm/action-setup@v6
-     with:
-      standalone: true
-   - name: 🔩 Setup Node ${{ matrix.node }}
-     uses: actions/setup-node@v7
-     with:
-      node-version: ${{ matrix.node }}
-      cache: "pnpm"
-   - name: 🚀 Install dependencies
-     run: pnpm install
-   - name: 🚀 Check formatting
-     run: "pnpm run format:check"
+  check:
+    name: Format check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["lts/*"]
+    steps:
+      - name: 🧱 Checkout repository
+        uses: actions/checkout@v7
+      - name: 🔩 Setup PNPM
+        uses: pnpm/action-setup@v6
+        with:
+          standalone: true
+      - name: 🔩 Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "pnpm"
+      - name: 🚀 Install dependencies
+        run: pnpm install
+      - name: 🚀 Check formatting
+        run: "pnpm run format:check"
